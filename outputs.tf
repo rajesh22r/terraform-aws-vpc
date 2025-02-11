@@ -13,3 +13,8 @@ output "default_vpc_info"{
 output "mainroutetableinfo" {
   value = data.aws_route_table.main
 }
+
+
+output "public_subnet_ids" {
+  value = aws_subnet.public[*].id
+}
